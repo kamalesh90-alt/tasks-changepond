@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 3px solid red;
+            width: 500px;
+            height: 500px;
+            padding: 10px;
+        }
+        .textarea{
+            height: 200px;
+            width: 200px;
+        }
+        .input-container{
+            float: right;
+        }
+        label{
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <textarea class="textarea" name="text" id="text"></textarea>
+    <div class="input-container">
+        <label for="rt">Replace Text</label>
+        <input type="text" name="rt" id="rt"><br>
+        <label for="nt">New Text</label>
+        <input type="text" name="nt" id="nt"><br>
+        <button type="button" onclick="ReplaceSingle()">Replace Single Text</button>
+        <button type="button" onclick="ReplaceAll()">Replace All Text</button>
+    </div>
+</div>
+<script>
+    
+    function ReplaceSingle(){
+        let rep=document.getElementById("rt").value;
+        let newt=document.getElementById("nt").value;
+        let msg=document.getElementById("text").value;
+        let regex = new RegExp(rep,'i');
+        document.getElementById("text").value=msg.replace(regex,newt);
+    }
+    function ReplaceAll(){
+        let rep=document.getElementById("rt").value;
+        let newt=document.getElementById("nt").value;
+        let msg=document.getElementById("text").value;
+        let regex = new RegExp(rep,'ig');
+        document.getElementById("text").value = msg.replaceAll(regex, newt);
+    }
+</script>
+</body>
+</html>

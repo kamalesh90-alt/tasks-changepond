@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./images.jpeg" id="img1" alt="gg" /><br />
+    <strong id="imgName">sunny</strong>
+    <button type="button" id="btn" onclick="changeImage()">Change Image</button>
+    <script>
+      let url = "/images.jpeg";
+      let url1 = "/images.jpeg";
+      let vijay = "sunny";
+      let gg = url1;
+      function changeImage() {
+        if (vijay == "vijay") {
+          document.getElementById("img1").src = "./images.jpeg";
+          document.getElementById("imgName").innerHTML = "rosey";
+          vijay = "dhoni";
+        } else {
+          document.getElementById("img1").src = "./images 3.jpeg";
+          document.getElementById("imgName").innerHTML = "sunny";
+          vijay = "vijay";
+        }
+      }
+    </script>
+  </body>
+</html>

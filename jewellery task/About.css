@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(21, 0, 255);
+}
+.container-fluid{
+    background-color: rgb(0, 166, 255);
+    text-align: center;
+    background-image: url(./bg.jpg);
+    text-shadow: 6px 3px 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+.container{
+    overflow: auto;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.img1{
+    width: 300px;
+    height: 300px;
+}
+
+.body-container{
+    background-image: url(./bodyb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+.footer-container{
+    background-image: url(./bg.jpg);
+}
+
+.reserve{
+    text-align: center;
+}
+li{
+    font-weight: 600;
+}

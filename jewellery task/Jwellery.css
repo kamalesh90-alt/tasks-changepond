@@ -1,0 +1,32 @@
+body{
+    background-color: gold;
+}
+
+.container-fluid{
+    background-color: gold;
+    text-align: center;
+    background-image: url(./bg.jpg);
+    text-shadow: 6px 3px 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.body-container{
+    background-image: url(./bodyb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 10px;
+}
+
+.footer-container{
+    background-image: url(./bg.jpg);
+}
+
+.reserve{
+    text-align: center;
+}
+li{
+    font-weight: 600;
+}

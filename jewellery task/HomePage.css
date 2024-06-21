@@ -1,0 +1,56 @@
+body{
+    background-color: gold;
+}
+
+.container-fluid{
+    background-color: gold;
+    text-align: center;
+    background-image: url(./bg.jpg);
+    text-shadow: 6px 3px 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.carousel-inner img {
+    width: 100%; 
+    height: auto;
+    
+}
+
+.model{
+    float: left;
+    height: auto;
+}
+
+.container{
+    display: flex;
+    align-items: center; 
+    width: 90%; 
+    margin: auto; 
+    overflow: auto;    
+}
+
+.quote{
+    width: 50%; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+p{
+    text-align: center;
+}
+
+.body-container{
+    background-image: url(./bodyb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-container{
+    background-image: url(./bg.jpg);
+}
+
+li{
+    font-weight: 600;
+}

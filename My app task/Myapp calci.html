@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Myapp.css">
+</head>
+<body>
+    <div class="app-container" id="app-container">
+        
+        <div id="calculator" class="app-content" style="display: block;">
+            <form>
+                <label>Enter First Number
+                    <input type="text" name="fn" id="fn"><br>
+                </label>
+                <label>Enter Second Number
+                    <input type="text" name="sn" id="sn"><br>
+                </label>
+                <button type="button" onclick="addition()">Add</button>
+                <button type="button" onclick="subtraction()">Sub</button>
+                <button type="button" onclick="multiplication()">Mul</button>
+                <button type="button" onclick="division()">Div</button>
+                <br>
+                <b>Result: <span id="Result"></span></b><br>
+            </form>
+        </div>
+        
+        <div id="temperature" class="app-content">
+            <form>
+                <label>Enter Temperature in Celsius
+                    <input type="text" name="tc" id="tc"><br>
+                </label>
+                <button type="button" onclick="convertTemperature()">Convert to Fahrenheit</button>
+                <br>
+                <b>Result: <span id="TempResult"></span></b><br>
+            </form>
+        </div>
+        
+        <div id="weight" class="app-content">
+            <form>
+                <label>Enter Weight in Grams
+                    <input type="text" name="wc" id="wc"><br>
+                </label>
+                <button type="button" onclick="convertWeight()">Convert</button>
+                <br>
+                <b>Results:</b><br>
+                Kilograms: <span id="kgResult"></span><br>
+                Pounds: <span id="poundsResult"></span><br>
+                Pounds (lbs): <span id="lbsResult"></span><br>
+                Tons: <span id="tonsResult"></span><br>
+            </form>
+        </div>
+        
+        <div id="percentage" class="app-content">
+            <form>
+                <label>Enter Obtained Marks
+                    <input type="text" name="om" id="om"><br>
+                </label>
+                <label>Enter Total Marks
+                    <input type="text" name="tm" id="tm"><br>
+                </label>
+                <button type="button" onclick="percentagecal()">Percentage</button>
+                <br>
+                <b>Results:</b><br>
+                Percentage: <span id="perResult"></span><br>
+            </form>
+        </div>
+        
+        <div id="age" class="app-content">
+            <form>
+                <label>Enter Birth Date
+                    <input type="text" name="bd" id="bd"><br>
+                </label>
+                <label>Enter Birth Month
+                    <input type="text" name="bm" id="bm"><br>
+                </label>
+                <label>Enter Birth Year
+                    <input type="text" name="by" id="by"><br>
+                </label>
+                <button type="button" onclick="calculateAge()">Calculate Age</button>
+                <br>
+                <b>Results:</b><br>
+                Age: <span id="ageResult"></span><br>
+            </form>
+        </div>
+        
+        <div id="currency" class="app-content">
+            <form>
+                <label>Enter Currency in Rupees
+                    <input type="text" name="inr" id="inr"><br>
+                </label>
+                <button type="button" onclick="dollar()">Dollar</button>
+                <button type="button" onclick="pound()">Pound</button>
+                <button type="button" onclick="dinar()">Dinar</button>
+                <br>
+                <b>Results:</b><br>
+                Dollar: <span id="dollarResult"></span><br>
+                Pound: <span id="poundResult"></span><br>
+                Dinar: <span id="dinarResult"></span><br>
+            </form>
+        </div>
+    </div>
+    
+    <div class="button-row">
+        <button type="button" onclick="showApp('calculator')">Calculator</button>
+        <button type="button" onclick="showApp('temperature')">Temperature Converter</button>
+        <button type="button" onclick="showApp('weight')">Weight Converter</button>
+    </div>
+    <div class="button-row">
+        <button type="button" onclick="showApp('percentage')">Percentage Calculator</button>
+        <button type="button" onclick="showApp('age')">Age Calculator</button>
+        <button type="button" onclick="showApp('currency')">Currency Converter</button>
+    </div>
+
+    <script>
+    
+        function showApp(appId) {
+            
+            document.querySelectorAll('.app-content').forEach(function(app) {
+                app.style.display = 'none';
+            });
+
+          
+            document.getElementById(appId).style.display = 'block';
+        }
+
+       
+        function addition() {
+            let num1 = parseFloat(document.getElementById("fn").value) || 0;
+            let num2 = parseFloat(document.getElementById("sn").value) || 0;
+            let sum = num1 + num2;
+            document.getElementById("Result").textContent = sum;
+        }
+
+        function subtraction() {
+            let num1 = parseFloat(document.getElementById("fn").value) || 0;
+            let num2 = parseFloat(document.getElementById("sn").value) || 0;
+            let sub = num1 - num2;
+            document.getElementById("Result").textContent = sub;
+        }
+
+        function multiplication() {
+            let num1 = parseFloat(document.getElementById("fn").value) || 0;
+            let num2 = parseFloat(document.getElementById("sn").value) || 0;
+            let mul = num1 * num2;
+            document.getElementById("Result").textContent = mul;
+        }
+
+        function division() {
+            let num1 = parseFloat(document.getElementById("fn").value) || 0;
+            let num2 = parseFloat(document.getElementById("sn").value) || 0;
+            let div = num1 / num2;
+            document.getElementById("Result").textContent = div.toFixed(2); 
+        }
+
+       
+        function convertTemperature() {
+            let tempC = parseFloat(document.getElementById("tc").value) || 0;
+            let tempF = (tempC * 9/5) + 32;
+            document.getElementById("TempResult").textContent = tempF.toFixed(2); 
+        }
+
+        
+        function convertWeight() {
+            let grams = parseFloat(document.getElementById("wc").value) || 0;
+            let kg = grams / 1000;
+            let pounds = grams * 0.00220462;
+            let lbs = grams * 0.00220462;
+            let tons = grams / 1000000; 
+            document.getElementById("kgResult").textContent = kg.toFixed(2); 
+            document.getElementById("poundsResult").textContent = pounds.toFixed(2); 
+            document.getElementById("lbsResult").textContent = lbs.toFixed(2); 
+            document.getElementById("tonsResult").textContent = tons.toFixed(6); 
+        }
+
+        
+        function percentagecal() {
+            let obtained = parseFloat(document.getElementById("om").value) || 0;
+            let total = parseFloat(document.getElementById("tm").value) || 0;
+            let percentage = (obtained / total) * 100;
+            document.getElementById("perResult").textContent = percentage.toFixed(2) + "%"; 
+        }
+
+        
+        function calculateAge() {
+            let birthDate = parseInt(document.getElementById("bd").value) || 1;
+            let birthMonth = parseInt(document.getElementById("bm").value) || 1;
+            let birthYear = parseInt(document.getElementById("by").value) || 1900;
+
+            let currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let currentMonth = currentDate.getMonth() + 1; 
+
+            let age = currentYear - birthYear;
+            if (currentMonth < birthMonth || (currentMonth === birthMonth && currentDate.getDate() < birthDate)) {
+                age--;
+            }
+
+            document.getElementById("ageResult").textContent = age; 
+        }
+
+        
+        function dollar() {
+            let inr = parseFloat(document.getElementById("inr").value) || 0;
+            let dollar = inr * 0.014;
+            document.getElementById("dollarResult").textContent = dollar.toFixed(2)+" USD";
+        }
+
+        function pound() {
+            let inr = parseFloat(document.getElementById("inr").value) || 0;
+            let pound = inr * 0.011;
+            document.getElementById("poundResult").textContent = pound.toFixed(2)+" GBP";
+        }
+
+        function dinar() {
+            let inr = parseFloat(document.getElementById("inr").value) || 0;
+            let dinar = inr * 0.0042;
+            document.getElementById("dinarResult").textContent = dinar.toFixed(2)+" KWD";
+        }
+    </script>
+</body>
+</html>

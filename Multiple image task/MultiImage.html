@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./ajith.webp" id="img1" alt="gg"><br>
+    <strong id="imgName">Ajith Kumar</strong><br>
+    <button type="button" id="btn" onclick="changevijayImage()">Vijay</button>
+    <button type="button" id="btn" onclick="changedhoniImage()">Dhoni</button>
+    <button type="button" id="btn" onclick="changeviratImage()">Virat</button>
+    <button type="button" id="btn" onclick="changemessiImage()">Messi</button>
+    <button type="button" id="btn" onclick="changerdjImage()">RDJ</button>
+    <button type="button" id="btn" onclick="changerockImage()">Rock</button>
+    <script>
+    function changevijayImage(){
+        document.getElementById("img1").src="./vijay.webp";
+        document.getElementById("imgName").innerHTML="Vijay";
+    }
+    function changedhoniImage(){
+        document.getElementById("img1").src="./dhoni.jpg";
+        document.getElementById("imgName").innerHTML="Dhoni";
+    }
+    function changeviratImage(){
+        document.getElementById("img1").src="./vk.webp";
+        document.getElementById("imgName").innerHTML="Virat Kohli";
+    }
+    function changemessiImage(){
+        document.getElementById("img1").src="./messi.jpg";
+        document.getElementById("imgName").innerHTML="Lionel Messi";
+    }
+    function changerdjImage(){
+        document.getElementById("img1").src="./rdj.jpg";
+        document.getElementById("imgName").innerHTML="Robert Downey Jr";
+    }
+    function changerockImage(){
+        document.getElementById("img1").src="./rock.jpg";
+        document.getElementById("imgName").innerHTML="Dwayne Johnson";
+    }
+</script>
+</body>
+</html>
